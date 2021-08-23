@@ -1,27 +1,30 @@
-# Quotes
+# Title
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+The name of the project is Quotes.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is an angular app used to write quotes. The projects aim is for people to publish their quotes online and vote for which quotes they like best.
 
-## Code scaffolding
+## Technologies used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project was done via angular cli
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Author's Details
 
-## Running unit tests
+The author of the project was Alan Macharia
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+The project can be found in Github. It can be cloned and used locally. 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contact information
 
-## Further help
+You can reach him by: Email: (mashalonzo@gmail.com) Tel no: 0704476898
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License and Copyright information
+
+They can be found at MIT-https://opensource.org/licenses/MIT
+
+
