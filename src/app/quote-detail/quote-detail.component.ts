@@ -10,3 +10,26 @@ export class QuoteDetailComponent implements OnInit {
   
   @Input() quote: Quote;
   
+  @Output() toUpVote = new EventEmitter<boolean>();
+  upVote(increase: boolean) {
+    this.toUpVote.emit(increase)
+  }
+
+  @Output() toDownVote = new EventEmitter<boolean>();
+  downVote(decrease: boolean) {
+    this.toDownVote.emit(decrease)
+  }
+
+  @Output() toDelete = new EventEmitter<boolean>();
+  quoteDelete(complete:boolean) { 
+    this.toDelete.emit(complete)
+  }
+
+  
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
