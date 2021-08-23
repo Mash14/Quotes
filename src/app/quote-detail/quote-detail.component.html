@@ -1,1 +1,7 @@
-<p>quote-detail works!</p>
+<p>The author of this quote is {{quote.author}}</p>
+<p>The quote was submitted by {{quote.submitter}}</p>
+<p>Quote was published: {{quote.completeDate|dateCount}}</p>
+<button type="button" class="btn btn-success" (click)="upVote(true)">Yes</button>
+<button type="button" class="btn btn-danger" (click)="downVote(true)">No</button>
+<button (click) = 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+
