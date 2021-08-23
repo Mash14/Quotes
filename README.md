@@ -21,10 +21,13 @@ The project can be found in Github. It can be cloned and used locally.
 
 ## Contact information
 
-You can reach him by: Email: (mashalonzo@gmail.com) Tel no: 0704476898
+You can reach him by: Email: [mashalonzo@gmail.com](gmail.com) Tel no: 0704476898
 
 ## License and Copyright information
 
-They can be found at MIT-https://opensource.org/licenses/MIT
+They can be found at MIT-[license](https://opensource.org/licenses/MIT)
 
+## Project
+
+The project can be found here:[Quotes](https://mash14.github.io//Quotes/)
 
