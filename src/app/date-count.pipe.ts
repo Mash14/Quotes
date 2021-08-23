@@ -18,3 +18,18 @@ export class DateCountPipe implements PipeTransform {
                 'minute': 60,
                 'second': 1
             };
+            let counter;
+            for (const i in intervals) {
+                counter = Math.floor(seconds / intervals[i]);
+                if (counter > 0)
+                    if (counter === 1) {
+                        return counter + ' ' + i + ' ago'; // singular (1 day ago)
+                    } else {
+                        return counter + ' ' + i + 's ago'; // plural (2 days ago)
+                    }
+            }
+        }
+        return value;
+    }
+  
+  }
