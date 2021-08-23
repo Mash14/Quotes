@@ -5,8 +5,8 @@
         <div class="col-md-6">
             <div *ngFor = 'let quote of quotes; let i = index'>
                 <div>
-                    <h4>{{ quote.name }}. It was posted on {{quote.completeDate|date:"MMM d,y at h:mm:ss a"}}</h4>
-                    <button (click) = 'toggleDetails(i)' class="btn btn-primary">Details</button>
+                    <h5>{{ quote.name }}. It was posted on {{quote.completeDate|date}}</h5>
+                    <button (click) = 'toggleDetails(i)' class="btn btn-info">Details</button>
                 </div>
                 
                 <div *ngIf = 'quote.showDescription'>
