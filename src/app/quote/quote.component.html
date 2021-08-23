@@ -1,1 +1,21 @@
-<p>quote works!</p>
+<div>
+    <h1>Quotes</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor = 'let quote of quotes; let i = index'>
+                <div>
+                    <h4>{{ quote.name }}. It was posted on {{quote.completeDate|date:"MMM d,y at h:mm:ss a"}}</h4>
+                    <button (click) = 'toggleDetails(i)' class="btn btn-primary">Details</button>
+                </div>
+                
+                <div *ngIf = 'quote.showDescription'>
+                    <app-quote-detail  [quote] = 'quote' (toDelete) = 'deleteQuote($event,i)'></app-quote-detail>       
+                </div>            
+            </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+        </div>
+    </div> 
+</div>
