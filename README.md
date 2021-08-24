@@ -29,5 +29,5 @@ They can be found at MIT-[license](https://opensource.org/licenses/MIT)
 
 ## Project
 
-The project can be found here:[Quotes](https://mash14.github.io//Quotes/)
+The project can be found here:[Quotes](https://Mash14.github.io/Quotes/)
 
