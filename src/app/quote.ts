@@ -3,4 +3,4 @@ export class Quote {
     constructor(public id: number, public name: string, public author: string, public submitter: string, public completeDate: Date) {
       this.showDescription = false;
     }
-  }
+}

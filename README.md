@@ -6,9 +6,23 @@ The name of the project is Quotes.
 
 This is an angular app used to write quotes. The projects aim is for people to publish their quotes online and vote for which quotes they like best.
 
+## User Story
+
+- Create a new quote.
+
+- Upvote or downvote a quote.
+
+- Delete a quote
+
+- See the number of upvotes and number of downvotes for each quote
+
 ## Technologies used
 
 This project was done via angular cli
+
+## Known Bugs
+
+No known bugs
 
 
 ## Author's Details

@@ -29,7 +29,7 @@ export class QuoteComponent implements OnInit {
     
       deleteQuote(toDelete: any, index: any) {
         if(toDelete) {
-            let isComplete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+            let isComplete = confirm(`Are you sure you want to delete '${this.quotes[index].name}'?`)
         
           if (isComplete) {
             this.quotes.splice(index, 1);
@@ -42,5 +42,5 @@ export class QuoteComponent implements OnInit {
       ngOnInit(): void {
       }
     
-    }
+}
     
