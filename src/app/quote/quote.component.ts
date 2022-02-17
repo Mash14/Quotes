@@ -4,6 +4,7 @@ import { Quote } from '../quote';
 import { AlertService } from '../alert-service/alert.service';
 import { QuoteService } from '../quote-service/quote.service';
 import { Quot } from '../quote-class/quot'
+import { QuoteRequestService } from '../quote-http/quote-request.service';
 
 @Component({
   selector: 'app-quote',
@@ -38,24 +39,28 @@ export class QuoteComponent implements OnInit {
         }
       }
       
-      constructor(quoteService:QuoteService,alertService:AlertService,private http:HttpClient) { 
+      constructor(quoteService:QuoteService,alertService:AlertService,private http:HttpClient,private quoteRequest:QuoteRequestService) { 
         this.quotes = quoteService.getQuotes();
         this.alertService = alertService;
       }
     
       ngOnInit(): void {
+            // Before
+        // interface ApiResponse {
+        //   author:string,
+        //   quote:string,
+        //   permalink:string,
+        // }
 
-        interface ApiResponse {
-          author:string,
-          quote:string,
-          permalink:string,
-        }
-
-        this.http.get<ApiResponse>('http://quotes.stormconsultancy.co.uk/random.json').subscribe(data=>{
-          this.quot = new Quot(data.author, data.quote, data.permalink);
-        },err=>{
-          this.quot = new Quot("Marc Benioff", "The only constant in technology is change", "https://freshservice.com/general/top-it-quotes-blog/")
-        });
+        // this.http.get<ApiResponse>('http://quotes.stormconsultancy.co.uk/random.json').subscribe(data=>{
+        //   this.quot = new Quot(data.author, data.quote, data.permalink);
+        // },err=>{
+        //   this.quot = new Quot("Marc Benioff", "The only constant in technology is change", "https://freshservice.com/general/top-it-quotes-blog/")
+        // });
+        
+            //After
+        this.quoteRequest.quoteResponse();
+        this.quot = this.quoteRequest.quote;
       }
 }
     
