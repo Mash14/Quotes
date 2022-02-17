@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <h1 class="text-center">Quotes</h1>
     <hr>
     <div class="row">
@@ -19,4 +19,11 @@
             <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
         </div>
     </div> 
+    <br>
+    <div class="row"> 
+        <blockquote class="blockquote text-center">
+            <p class="mb-0">{{quot.quote}} - <small><a href="{{quot.permalink}}">(link)</a></small></p>
+            <footer class="blockquote-footer"><cite>{{quot.author}}</cite></footer>
+        </blockquote>
+    </div>
 </div>

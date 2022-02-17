@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Quote } from '../quote';
+import { AlertService } from '../alert-service/alert.service';
+import { QuoteService } from '../quote-service/quote.service';
+import { Quot } from '../quote-class/quot'
 
 @Component({
   selector: 'app-quote',
@@ -8,13 +12,9 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   
-    quotes:Quote[] =[
-        new Quote(1, "That which does not kill us makes us stronger", "Friedrich Nietzshe", "Mash", new Date(2021,5,12)),
-        new Quote(2, "We must not allow other people's limited perceptions to define us", "Virginia Satir", "Mash", new Date(2020,7,11)),
-        new Quote(3, "Do what you can, with what you have, where you are", "Theodore Roosevelt", "Mash", new Date(2020,3,24)),
-        new Quote(4, "Be yourself; everyone else is already taken", "Oscar Wilde", "Mash", new Date(2020,12,25)),
-        new Quote(5, "This above all: to thine own self be true", "William Shakespeare", "Mash", new Date(2018,1,2)),
-      ];
+    quotes:Quote[] =[];
+    quot:Quot;
+    alertService:AlertService;
     
       addNewQuote(quote: any) {
         let quoteLength = this.quotes.length;
@@ -33,14 +33,29 @@ export class QuoteComponent implements OnInit {
         
           if (isComplete) {
             this.quotes.splice(index, 1);
+            this.alertService.alertMe("The quote has been successefully deleted.")
           }
         }
       }
       
-      constructor() { }
-    
-      ngOnInit(): void {
+      constructor(quoteService:QuoteService,alertService:AlertService,private http:HttpClient) { 
+        this.quotes = quoteService.getQuotes();
+        this.alertService = alertService;
       }
     
+      ngOnInit(): void {
+
+        interface ApiResponse {
+          author:string,
+          quote:string,
+          permalink:string,
+        }
+
+        this.http.get<ApiResponse>('http://quotes.stormconsultancy.co.uk/random.json').subscribe(data=>{
+          this.quot = new Quot(data.author, data.quote, data.permalink);
+        },err=>{
+          this.quot = new Quot("Marc Benioff", "The only constant in technology is change", "https://freshservice.com/general/top-it-quotes-blog/")
+        });
+      }
 }
     
