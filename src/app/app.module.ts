@@ -12,6 +12,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightDirective } from './highlight.directive';
 import { QuoteService } from './quote-service/quote.service';
 import { AlertService } from './alert-service/alert.service';
+import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AlertService } from './alert-service/alert.service';
     QuoteDetailComponent,
     DateCountPipe,
     QuoteFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

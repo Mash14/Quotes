@@ -29,6 +29,7 @@ export class QuoteRequestService {
         this.quote.author = 'Marc Benioff',
         this.quote.quote = 'The only constant in technology is change',
         this.quote.permalink = 'https://freshservice.com/general/top-it-quotes-blog/'
+        
         reject(error)
       })
     })

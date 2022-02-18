@@ -39,7 +39,7 @@ export class QuoteComponent implements OnInit {
         }
       }
       
-      constructor(quoteService:QuoteService,alertService:AlertService,private http:HttpClient,private quoteRequest:QuoteRequestService) { 
+      constructor(quoteService:QuoteService, alertService:AlertService, private quoteRequest:QuoteRequestService) { 
         this.quotes = quoteService.getQuotes();
         this.alertService = alertService;
       }
