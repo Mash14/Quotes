@@ -8,10 +8,10 @@ export class HighlightDirective {
   constructor(private elem:ElementRef) {}
 
   @HostListener('click') onClick() {
-    this.textDeco('blue');
+    this.textDeco('black');
   } 
   @HostListener('dblclick') onDoubleClick() {
-    this.textDeco('black');
+    this.textDeco('blue');
   }
 
   private textDeco(action:string) {

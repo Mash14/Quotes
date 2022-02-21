@@ -15,6 +15,7 @@ import { AlertService } from './alert-service/alert.service';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SingleQuoteComponent } from './single-quote/single-quote.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HighlightDirective,
     AboutComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SingleQuoteComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { AlertService } from '../alert-service/alert.service';
 import { QuoteService } from '../quote-service/quote.service';
 import { Quot } from '../quote-class/quot'
 import { QuoteRequestService } from '../quote-http/quote-request.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quote',
@@ -38,8 +39,12 @@ export class QuoteComponent implements OnInit {
           }
         }
       }
+
+      goToUrl(id:number) {
+        this.router.navigate(['',id])
+      }
       
-      constructor(quoteService:QuoteService, alertService:AlertService, private quoteRequest:QuoteRequestService) { 
+      constructor(quoteService:QuoteService, alertService:AlertService, private quoteRequest:QuoteRequestService, private router:Router) { 
         this.quotes = quoteService.getQuotes();
         this.alertService = alertService;
       }

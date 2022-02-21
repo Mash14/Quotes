@@ -8,6 +8,7 @@
                     <h5 appHighlight>{{ quote.name }}.</h5>
                     <h6>It was posted on {{quote.completeDate|date}}.</h6>
                     <button (click) = 'toggleDetails(i)' class="btn btn-warning">Details</button>
+                    <button (click)="goToUrl(quote.id)" class="btn btn-primary">View</button>
                 </div>
                 
                 <div *ngIf = 'quote.showDescription'>

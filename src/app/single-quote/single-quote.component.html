@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" appHighlight>{{quote?.name}}</h4>
+                <p class="card-text">It was posted on  {{quote?.completeDate|date}}</p>
+                <p class="card-text">The author of this quote is {{quote?.author}}.</p>
+                <p class="card-text">The quote was submitter by {{quote?.submitter}}; {{quote?.completeDate|dateCount}}.</p>
+                <button (click)='likes()' style="font-size:14px" class="btn btn-success"> <i class="fa fa-thumbs-up"></i></button>  
+                <button (click)="dislike()" style="font-size:14px" class="btn btn-danger dislike"> <i class="fa fa-thumbs-down"></i></button><br>
+                <p class="card-text">Number of votes: {{votes}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <img src="https://wallpaper.dog/large/10961682.jpg" height="550px" width="700px">
+    </div>
+    <div col-md-2></div>
+</div>    

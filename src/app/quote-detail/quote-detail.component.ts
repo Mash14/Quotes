@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
   
-  @Input() quote: Quote;
+  @Input() quote!: Quote;
   
   
   votes:number = 0;
